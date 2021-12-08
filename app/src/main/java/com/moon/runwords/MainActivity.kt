@@ -45,12 +45,15 @@ fun Navigation(navController: NavHostController) {
         composable(NavigationItem.Favorite.route) {
             FavoriteScreen()
         }
+        composable(NavigationItem.Info.route) {
+            InfoScreen()
+        }
     }
 }
 
 @Composable
 fun BottomNavigationBar(navController: NavController) {
-    val items = listOf(NavigationItem.Home, NavigationItem.Favorite)
+    val items = listOf(NavigationItem.Home, NavigationItem.Favorite, NavigationItem.Info)
     BottomNavigation(
         backgroundColor = graySurface,
         contentColor = Color.White
@@ -67,12 +70,12 @@ fun BottomNavigationBar(navController: NavController) {
                 selected = currentRoute == item.route,
                 onClick = {
                     navController.navigate(item.route) {
-                        navController.graph.startDestinationRoute?.let { route->
+                        navController.graph.startDestinationRoute?.let { route ->
                             popUpTo(route) {
                                 saveState = true
                             }
                         }
-                        launchSingleTop =true
+                        launchSingleTop = true
                         restoreState = true
                     }
                 })
