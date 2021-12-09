@@ -3,6 +3,44 @@ package com.moon.runwords.data
 import com.moon.runwords.R
 
 object DataProvider {
+    val tipList = listOf(
+        Tip(
+            id = 1,
+            title = "시세",
+            url = "http://jahber.net"
+        ),
+        Tip(
+            id = 2,
+            title = "아이템",
+            url = "https://bit.ly/3nbwGZb"
+        ),
+        Tip(
+            id = 3,
+            title = "버스노선",
+            url = "https://m.inven.co.kr/webzine/wznews.php?site=diablo2&iskin=diablo2&idx=263097"
+        ),
+        Tip(
+            id = 4,
+            title = "초보팁",
+            url = "https://m.cafe.daum.net/humornara/5Y2/743616?q=%EB%AA%A8%EB%82%98%ED%81%AC%20%EB%94%94%EC%95%842&"
+        ),
+        Tip(
+            id = 5,
+            title = "앵벌",
+            url = "https://m.dcinside.com/board/diablo2resurrected/13439"
+        ),
+        Tip(
+            id = 6,
+            title = "공략",
+            url = "https://heumu.blogspot.com/2020/01/2_8.html"
+        ),
+        Tip(
+            id = 7,
+            title = "길찾기",
+            url = "https://m.inven.co.kr/board/diablo2/5734/89"
+        )
+    )
+
     val runList = listOf(
         Rune(
             id = 1,
